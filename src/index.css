@@ -1,0 +1,101 @@
+/* Global Styles */
+:root {
+  --primary-color: #1840e3;
+  --secondary-color: #f5efd9;
+  --dark-color: #000000;
+  --light-color: #ffffff;
+  --danger-color: #f40552;
+  --success-color: #32e0c4;
+}
+
+/* Text Styles*/
+.lead {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+/* Hamburger Menu Modal*/
+.menu-modal {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: hidden;
+  outline: none;
+  padding: 40px;
+  z-index: 1000;
+}
+.menu-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  z-index: 1;
+}
+.menu-modal > ul {
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+}
+.menu-modal > ul > a {
+  margin-bottom: 20px;
+}
+.menu-modal > ul > .logout-link {
+  margin-top: auto;
+  margin-bottom: 100px;
+  align-self: center;
+  font-weight: 600;
+}
+
+/* Submit List Modal */
+.ReactModalPortal > div {
+  opacity: 0;
+}
+.ReactModalPortal .ReactModal__Overlay {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: opacity 200ms ease-in-out;
+}
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+.modal {
+  width: 30rem;
+  outline: none;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__title {
+  margin: 0 0 2rem 0;
+}
+.modal__input {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: 300;
+  margin: 2rem 0 2rem 0;
+  word-break: break-all;
+}
